@@ -6,6 +6,7 @@ const taskSchema = new mongoose.Schema(
         description: {type: String, require: true},
         status: {type: String, enum: ['TODO','DONE'], default: 'TODO'},
         deadline: {type: Date, require: true },
+        linkedFile: {data: Buffer, contentType: String},
     },
     {timestamps: true}
 );

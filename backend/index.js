@@ -1,26 +1,20 @@
+require("dotenv").config();
 const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
-const taskModel = require('./models/task.model');
-console.log(taskModel);
-const TaskService = require("./services/task.service");
+//const taskModel = require('./models/task.model');
+//const TaskService = require("./services/task.service");
 
-const TaskServiceInstance = new TaskService();
-console.log(
-  TaskServiceInstance.find,
-  TaskServiceInstance.create,
-  TaskServiceInstance.update,
-  TaskServiceInstance.delete,
-);
+//const TaskServiceInstance = new TaskService();
 
-const {
-    getTasks,
-    createTask,
-    updateTask,
-    deleteTask,
-  } = require("./controllers/task.controller");
-  
-  console.log(getTasks, createTask, updateTask, deleteTask);
+// const {
+//     getTasks,
+//     createTask,
+//     updateTask,
+//     deleteTask,
+//   } = require("./controllers/task.controller");
+  //const upload = require('./config/multerConfig');
+
 
   
 const taskRoutes = require("./routes/task.route");

@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const taskRoutes = require("./routes/task.route");
 
 const app = express();
-const PORT = process.env.PORT || 8082;
+const PORT = process.env.PORT;
 const DB_URI = process.env.DB_URI;
 
 mongoose.connect(DB_URI, {

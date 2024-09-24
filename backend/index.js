@@ -5,8 +5,8 @@ const mongoose = require('mongoose');
 const taskRoutes = require("./routes/task.route");
 
 const app = express();
-const PORT = 8082;
-const DB_URI = 'mongodb://localhost:27017/taskManager';
+const PORT = process.env.PORT || 8082;
+const DB_URI = process.env.DB_URI;
 
 mongoose.connect(DB_URI, {
     useNewUrlParser: true,
